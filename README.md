@@ -25,3 +25,7 @@ Flags:
   -u, target URL          the url of the target (exclude "/" at the end e.g http://example.com)
   -w, wordlist string     path to the wordlist
 ```
+# Example
+```bash
+ruby dirb.rb -w /usr/share/wordlists/dirb/common.txt -u http://10.10.87.158 -t 95
+```
