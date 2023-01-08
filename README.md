@@ -60,7 +60,7 @@ Since this tool is written in Ruby. Please refer to this page to install Ruby on
 ```bash
 ruby dirbreaker [command] -t [number_of_threads] -u [target_url] -w [path_to_wordlist]
 ```
-# Dockerfile
+# Docker
 Build the image using the below command. Make sure to run this in the same directory as the source code.
 ```bash
 docker build -t dirbreaker .
