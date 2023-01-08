@@ -29,3 +29,29 @@ Flags:
 ```bash
 ruby dirb.rb -w /usr/share/wordlists/dirb/common.txt -u http://10.10.87.158 -t 95
 ```
+The above command will give the following output:
+```bash
+===============================================================
+DirBreaker: Directory Buster
+By Howard Wu
+===============================================================
+$ Threads: 95
+$ Target url: http://10.10.87.158
+$ HTTP method: GET
+$ Wordlist: /usr/share/wordlists/dirb/common.txt
+===============================================================
+Begin Enumerating....
+===============================================================
+(Status Code): 200 | http://10.10.87.158/
+(Status Code): 301 | http://10.10.87.158/simple
+(Status Code): 200 | http://10.10.87.158/robots.txt
+(Status Code): 403 | http://10.10.87.158/.hta
+(Status Code): 200 | http://10.10.87.158/index.html
+(Status Code): 403 | http://10.10.87.158/.htaccess
+(Status Code): 403 | http://10.10.87.158/server-status
+(Status Code): 403 | http://10.10.87.158/.htpasswd
+Progress: 4613/4614~
+Finished
+Elapsed time: 20.252706798 seconds
+===============================================================
+```
