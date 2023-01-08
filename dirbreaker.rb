@@ -4,7 +4,7 @@ require "optparse"
 
 def draw(url, wordlists, num_threads)
 	puts '==============================================================='
-	puts 'DirFuzz: Directory Buster', 'By Howard Wu'
+	puts 'DirBreaker: Directory Buster', 'By Howard Wu'
 	puts '==============================================================='
 	puts "$ Threads: #{num_threads}", "$ Target url: #{url}", "$ HTTP method: GET", "$ Wordlist: #{wordlists}"
 	puts '==============================================================='
@@ -66,7 +66,7 @@ def main ()
             end
             opts.on("-h") do
                 puts 'Usage:'
-                puts '  dirfuzz [command]'
+                puts '  dirbreaker [command]'
                 puts ''
                 puts 'Available Commands:'
                 puts '  dir         Directory/file enumeration mode (default)'
@@ -91,7 +91,7 @@ def main ()
             end
         end.parse!
         if url.empty? or wordlist.empty?
-            puts 'Please refer to the help menu by typing: dirfuzz -h'
+            puts 'Please refer to the help menu by typing: dirbreaker -h'
             exit(0)
         end
         break    
