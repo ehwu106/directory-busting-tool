@@ -56,7 +56,16 @@ Elapsed time: 20.252706798 seconds
 ===============================================================
 ```
 # Run
-Since this tool is written in Ruby. Please refer to this page to install Ruby onto your local machine to run this tool: https://www.ruby-lang.org/en/. You could also build this as a docker container and run it without the need of installing Ruby onto your machine.
+Since this tool is written in Ruby. Please refer to this page to install Ruby onto your local machine to run this tool: https://www.ruby-lang.org/en/. You could also build this as a docker container and run it without the need of installing Ruby onto your machine. Please refer to the Docker section of this README.
 ```bash
 ruby dirbreaker [command] -t [number_of_threads] -u [target_url] -w [path_to_wordlist]
+```
+# Dockerfile
+Build the image using the below command. Make sure to run this in the same directory as the source code.
+```bash
+docker build -t dirbreaker .
+```
+Run it as a container using the below command. Replace the `[PATH_TO_WORDLIST]` and `[WORDLIST_NAME]` with the path and the wordlist names. Specify your flags for the tool after `dirbreaker`.
+```bash
+docker run -it --rm --volume "$(pwd)/[PATH_TO_WORDLIST]:/app/test.txt:ro" --name dirbreaker_container dirbreaker -u http://example.com -w [WORDLIST_NAME]
 ```
