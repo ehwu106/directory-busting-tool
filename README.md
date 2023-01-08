@@ -55,3 +55,8 @@ Finished
 Elapsed time: 20.252706798 seconds
 ===============================================================
 ```
+# Run
+Since this tool is written in Ruby. Please refer to this page to install Ruby onto your local machine to run this tool: https://www.ruby-lang.org/en/. You could also build this as a docker container and run it without the need of installing Ruby onto your machine.
+```bash
+ruby dirbreaker [command] -t [number_of_threads] -u [target_url] -w [path_to_wordlist]
+```
