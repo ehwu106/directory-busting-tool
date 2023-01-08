@@ -1,1 +1,1 @@
-# directory-busting-tool
+# DirFuzz: A directory busting tool
