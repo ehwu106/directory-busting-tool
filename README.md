@@ -65,7 +65,7 @@ Build the image using the below command. Make sure to run this in the same direc
 ```bash
 docker build -t dirbreaker .
 ```
-Run it as a container using the below command. Replace the `[PATH_TO_WORDLIST]` and `[WORDLIST]` with the path and the wordlist file (eg subdomain_top1000.txt). Specify your flags for the tool after `dirbreaker`.
+Run it as a container using the below command. Replace the `[PATH_TO_WORDLIST]` with the path of the wordlist file (eg /usr/share/wordlists/subdomain_top1000.txt) and `[WORDLIST]` with the file name (eg subdomain_top1000.txt). Specify your flags for the tool after `dirbreaker`.
 ```bash
 docker run -it --rm --volume "[PATH_TO_WORDLIST]:/app/[WORDLIST]:ro" --name dirbreaker_container dirbreaker -u [TARGETED_WEBSITE] -w [WORDLIST]
 ```
